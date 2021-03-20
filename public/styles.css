@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #eee;
+  background-image: url(background-color: #a6b0aa);
+  background-image: url("https://www.transparenttextures.com/patterns/white-brick-wall.png");
+  padding: 0 16px;
+}
+
+header {
+  background-color: #a29bfe;
+  margin: auto -32px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #ccc;
+}
+.note {
+  position: relative;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left; 
+}
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: absolute;
+  right: -16px;
+  bottom: -16px;
+  background: #a29bfe;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+form.create-note {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+ form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #a29bfe;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+/* Note classes */
+.low {
+ background-color: #ccf7ea;
+}
+.high{
+  background-color: #fab1a0;
+  font-weight: 500;
+  font-size: 22px;
+}
+.normal {
+  color: #747d8c !important;
+  font-size: 18px;
+}
+.high h1{
+  font-weight: 900 !important;
+}
+/* Checkbox */
+.round {
+  position: absolute;
+  right: 2px;
+  top: -12px;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: #a29bfe;
+  border-color: #a29bfe;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+/* Priority radios */
+.radio {
+  position: relative;
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 14px;
+  margin: 15px;
+}
+.radio .label {
+  position: relative;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #c8ccd4;
+  border-radius: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+.radio .label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #225cff;
+  transform: scale(0);
+  transition: all 0.2s ease;
+  opacity: 0.08;
+  pointer-events: none;
+}
+.radio:hover .label:after {
+  transform: scale(3.6);
+}
+input[type="radio"]:checked + .label {
+  border-color: #225cff;
+}
+input[type="radio"]:checked + .label:after {
+  transform: scale(1);
+  transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+  opacity: 1;
+}
+.cntr {
+  position: absolute;
+  top: -10px;
+  left: 10%;
+  width: 75%;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+/* colors for priority */
+.lowP .label:after {
+  background: #55efc4 !important;
+}
+.lowP input[type="radio"]:checked + .label {
+  border-color: #55efc4 !important;
+}
+.normalP .label:after {
+  background: #636e72 !important;
+}
+.normalP input[type="radio"]:checked + .label {
+  border-color: #636e72 !important;
+}
+.highP .label:after {
+  background: #d63031 !important;
+}
+.highP input[type="radio"]:checked + .label {
+  border-color: #d63031 !important;
+}
