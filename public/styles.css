@@ -8,7 +8,7 @@ html {
 }
 body {
   background: #eee;
-  background-image: url(background-color: #a6b0aa);
+  background-image: url(background-color: #a6b0aa); 
   background-image: url("https://www.transparenttextures.com/patterns/white-brick-wall.png");
   padding: 0 16px;
 }
@@ -23,7 +23,7 @@ header {
 
 header h1 {
   color: #fff;
-  font-family: "McLaren", cursive;
+  font-family: 'Cherry Cream Soda', cursive;
   font-weight: 200;
 }
 
@@ -36,7 +36,7 @@ footer {
 }
 
 footer p {
-  color: #ccc;
+  color:rgb(179, 170, 170);
 }
 .note {
   position: relative;
@@ -110,18 +110,19 @@ form.create-note textarea {
 /* Note classes */
 .low {
  background-color: #ccf7ea;
+ color: #097435;
 }
 .high{
   background-color: #fab1a0;
-  font-weight: 500;
   font-size: 22px;
+  color: #630d03;
+}
+.high h1{
+  font-weight: 900 !important;
 }
 .normal {
   color: #747d8c !important;
   font-size: 18px;
-}
-.high h1{
-  font-weight: 900 !important;
 }
 /* Checkbox */
 .round {
@@ -143,7 +144,7 @@ form.create-note textarea {
 }
 
 .round label:after {
-  border: 2px solid #fff;
+  border: 3px solid #fff;
   border-top: none;
   border-right: none;
   content: "";
@@ -195,7 +196,6 @@ form.create-note textarea {
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  background: #225cff;
   transform: scale(0);
   transition: all 0.2s ease;
   opacity: 0.08;
@@ -203,9 +203,6 @@ form.create-note textarea {
 }
 .radio:hover .label:after {
   transform: scale(3.6);
-}
-input[type="radio"]:checked + .label {
-  border-color: #225cff;
 }
 input[type="radio"]:checked + .label:after {
   transform: scale(1);

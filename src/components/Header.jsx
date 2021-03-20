@@ -1,11 +1,11 @@
 import React from "react";
-import HighlightIcon from "@material-ui/icons/Highlight";
+import AssignmentIcon from '@material-ui/icons/Assignment';
 
 function Header() {
   return (
     <header>
       <h1>
-        Notii
+       <AssignmentIcon /> Notii
       </h1>
     </header>
   );
